@@ -3,7 +3,7 @@
 
    * Nodejs Installation - https://nodejs.org/en/download
     
-## Cypress Installation
+## Playwright Installation
 
    * Playwright Installation - https://playwright.dev/docs/intro
 
@@ -24,7 +24,7 @@ npx playwright test --headed
  ```bash
 npx playwright test "tests/<file-name.spec.js>"
  ```
- 
+
 * By default tests will run on 3 browsers parallel.
 * To run specific browser
  ```bash
