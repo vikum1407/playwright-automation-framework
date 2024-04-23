@@ -1,6 +1,10 @@
 import {test, expect} from '@playwright/test'
 
 test('Assertions', async({page}) =>{
+    /**
+     * There are two different assertion, there are Hard and Soft assertions.
+     * In playwright very assertion has soft assertion
+     */
     await page.goto("https://opensource-demo.orangehrmlive.com/");
 
     /**URL Validation */
@@ -14,5 +18,6 @@ test('Assertions', async({page}) =>{
 
     /**Element Enability validation */
     await expect(page.locator("button[type='submit']")).toBeEnabled();
+    
 
 })

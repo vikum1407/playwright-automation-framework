@@ -1,4 +1,5 @@
 import {test, expect} from '@playwright/test'
+import { use } from '../../playwright.config';
 
 test('Additional Locators', async ({page}) =>{
 
@@ -11,7 +12,10 @@ test('Additional Locators', async ({page}) =>{
     await expect(page.locator(".oxd-text.oxd-text--h5.orangehrm-login-title")).toBeVisible();
 
     // username password validation
-    const username = await page.locator("//input[@placeholder='Username']").type("admin");
-    const password = await page.locator("//input[@placeholder='Password']").type("admin123");
+    const username = await page.locator("//input[@placeholder='Username']")
+    const password = await page.locator("//input[@placeholder='Password']")
+
+    await username.fill('admin');
+    await password.fill('123')
     await page.locator("//button[@type='submit']").click();
 })

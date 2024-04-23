@@ -35,3 +35,39 @@ npx playwright test <file_name> --project=chromium
 ```bash
 npx playwright test --debug 
  ```
+
+ ## Allure Report
+
+* Added following allure report to the playwright.config.js file
+```bash
+ reporter: [
+    ['html'],
+    ['allure-playwright']
+  ], 
+ ```
+
+* Run the following command to add the allure install line to the package.json file
+```bash
+npm i -D @playwright/test allure-playwright
+ ```
+
+* Then run the test
+```bash
+npx playwright test 
+ ```
+
+* Run the following command to install allure commandline
+```bash
+npm install -D allure-commandline
+ ```
+
+* Run the following command to generate the allure report
+```bash
+npx allure generate ./allure-report --clean
+ ```
+
+* Run the following command to open the allure web
+```bash
+npx allure open ./allure-report
+ ```
+

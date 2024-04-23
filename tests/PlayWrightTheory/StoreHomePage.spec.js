@@ -6,7 +6,7 @@ test('Store Home Page Automation', async ({page}) =>{
 
     //page title validation
     const pageTitle = await page.title();
-    await expect(page).toHaveTitle('STORE');
+    await expect(pageTitle).toHaveTitle('STORE');
 
     //logo validation
     const logo = await page.locator("a[id='nava'] img");
